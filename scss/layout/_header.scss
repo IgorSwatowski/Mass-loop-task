@@ -1,0 +1,413 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.9rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background: $color-white;
+    transition: .6s ease;
+    line-height: 2;
+    color: $color-black;
+
+    @include respond(phone){
+        background-color: $color-white;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        font-size: 1.8rem;
+        font-weight: 500;
+        transition: .6s ease;
+        padding: 34px 0 0 0;
+        display: block;
+    }
+
+    @include respond(tablet-port){
+        background-color: $color-white;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        font-size: 1.8rem;
+        font-weight: 500;
+        transition: .6s ease;
+        padding: 34px 0 0 0;
+        display: block;
+    }
+
+    @include respond(tablet-land){
+        background-color: $color-white;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        font-size: 1.8rem;
+        font-weight: 500;
+        transition: .6s ease;
+        padding: 34px 0 0 0;
+        display: block;
+    }
+    @include respond(desktop-big){
+        padding: 0;
+        font-size: 1.6rem;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: $color-white;
+        @include respond(phone){
+            overflow: hidden;
+            display: block;
+        }
+        @include respond(tablet-port){
+            overflow: hidden;
+            display: block;
+        }
+        @include respond(tablet-land){
+            overflow: hidden;
+            display: block;
+        }
+        .menu-right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            @include respond(phone) {
+                margin-bottom: 61px;
+            }
+            @include respond(tablet-port) {
+                margin-bottom: 61px;
+            }
+            @include respond(tablet-land) {
+                margin-bottom: 61px;
+            }
+            .combobox-container {
+                background: none;
+                @include respond(phone){
+                    position: absolute;
+                    top: 12px;
+                    left: 159px;
+                    background: none;
+                }
+                @include respond(tablet-port){
+                    position: absolute;
+                    top: 12px;
+                    left: 159px;
+                    background: none;
+                }
+                @include respond(tablet-land){
+                    position: absolute;
+                    top: 12px;
+                    left: 159px;
+                    background: none;
+                }
+                #combobox1 {
+                    @include respond(phone){
+                        padding: 30px 0px;
+                        background: $color-white;
+                    }
+                    @include respond(port){
+                        padding: 30px 0px;
+                        background: $color-white;
+                    }
+                    @include respond(tablet-land){
+                        padding: 30px 0px;
+                        background: $color-white;
+                    }
+                }
+                @include respond(tablet-port){
+                    position: absolute;
+                    top: 9px;
+                    left: 320px;
+                }
+                @include respond(tablet-land){
+                    position: absolute;
+                    top: 10px;
+                    left: 320px;
+                }
+                @include respond(desktop-big){
+                    font-size: 1.5rem;
+                }
+                &--second{
+                    margin-left: 14px;
+                }
+            }
+            &-cta {
+                @include respond(phone) {
+                    margin: 0 auto;
+                }
+                @include respond(tablet-port) {
+                    margin: 0 auto;
+                }
+                @include respond(tablet-land) {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    .menu-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 155px;
+        margin-left: 155px;
+
+        @include respond(phone) {
+            display: block;
+            margin: 15px 32px;
+            font-size: 16px;
+            color: $color-black;
+            line-height: 20px;
+            text-align: center;
+        }
+        @include respond(tablet-port) {
+            display: block;
+            margin: 15px 32px;
+            font-size: 16px;
+            color: $color-black;
+            line-height: 20px;
+            text-align: center;
+        }
+        @include respond(tablet-land) {
+            display: block;
+            margin: 15px 32px;
+            font-size: 16px;
+            color: $color-black;
+            line-height: 20px;
+            text-align: center;
+        }
+        .menu-item {
+            a {
+                display: block;
+                margin: 15px 32px;
+                font-size: 16px;
+                color: $color-black;
+                line-height: 20px;
+                @include respond(phone){
+                    text-align: center;
+                    margin: 72px 0;
+                }
+                @include respond(tablet-port){
+                    text-align: center;
+                    margin: 72px 0;
+                }
+                @include respond(tablet-land){
+                    text-align: center;
+                    margin: 72px 0;
+                }
+                @include respond(desktop-big){
+                    font-size: 1.5rem;
+                }
+                text-decoration: none;
+            }
+        }
+    }
+    .menu-btn {
+        &:hover {
+            background-color: #f4f4f4;
+        }
+        display: none;
+        &:checked {
+            ~ {
+                .menu {
+                    max-height: 2340px;
+                }
+                .menu-icon {
+                    .navicon {
+                        background: transparent;
+                        &:before {
+                            transform: rotate(-45deg);
+                        }
+                        &:after {
+                            transform: rotate(45deg);
+                        }
+                    }
+                    &:not(.steps) {
+                        .navicon {
+                            &:before {
+                                top: 0;
+                            }
+                            &:after {
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logo {
+        display: block;
+        float: left;
+        font-size: 2rem;
+        text-decoration: none;
+        padding: 15px 0 14px 0;
+
+        @include respond(phone) {
+            padding-left: 25px;
+        }
+        @include respond(tablet-port) {
+            padding-left: 25px;
+        }
+        @include respond(tablet-land) {
+            padding-left: 25px;
+        }
+
+        img {
+            @include respond(phone) {
+                width: 97px;
+                height: 43px;
+            }
+        }
+
+        @include respond(desktop-big){
+            font-size: 1.5rem;
+        }
+    }
+    .menu {
+        @include respond(phone){
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+        }
+        @include respond(tablet-port){
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+        }
+        @include respond(tablet-land){
+            clear: both;
+            max-height: 0;
+            transition: max-height .2s ease-out;
+        }
+    }
+    .menu-icon {
+        display: none;
+        @include respond(phone){
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            position: relative;
+            user-select: none;
+            right: 31px;
+            top: 40px;
+        }
+        @include respond(tablet-port){
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            position: relative;
+            user-select: none;
+            right: 31px;
+            top: 40px;
+        }
+        @include respond(tablet-land){
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            position: relative;
+            user-select: none;
+            right: 31px;
+            top: 40px;
+        }
+        .navicon {
+            @include respond(phone){
+                background: #333;
+                display: block;
+                height: 2px;
+                position: relative;
+                transition: background .2s ease-out;
+                width: 32px;
+                &:before {
+                    background: #333;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                    top: 10px;
+                }
+                &:after {
+                    background: #333;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                    top: -10px;
+                }
+            }
+            @include respond(tablet-port){
+                background: #333;
+                display: block;
+                height: 2px;
+                position: relative;
+                transition: background .2s ease-out;
+                width: 32px;
+                &:before {
+                    background: #333;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                    top: 10px;
+                }
+                &:after {
+                    background: #333;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                    top: -10px;
+                }
+            }
+            @include respond(tablet-land){
+                background: #333;
+                display: block;
+                height: 2px;
+                position: relative;
+                transition: background .2s ease-out;
+                width: 32px;
+                &:before {
+                    background: #333;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                    top: 10px;
+                }
+                &:after {
+                    background: #333;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 100%;
+                    top: -10px;
+                }
+            }
+        }
+    }
+}

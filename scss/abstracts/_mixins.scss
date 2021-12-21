@@ -1,0 +1,29 @@
+@import "./variables";
+
+@mixin list-style(){
+    list-style-type: none;
+    padding-bottom: 0;
+}
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 600px)
+        { @content };
+    }
+    @if $breakpoint == tablet-port {
+        @media only screen and (min-width: 601px) and (max-width: 900px)
+        { @content };
+    }
+    @if $breakpoint == tablet-land {
+        @media only screen and (min-width: 901px) and (max-width: 1200px)
+        { @content };
+    }
+    @if $breakpoint == desktop-big {
+        @media only screen and (min-width: 1201px) and (max-width: 1440px)
+        { @content };
+    }
+    @if $breakpoint == desktop-bigger {
+        @media only screen and (min-width: 1441px) and (max-width: 1886px)
+        { @content };
+    }
+}

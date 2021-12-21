@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "jquery": "^3.6.0",
+    "selectize": "^0.12.6",
+    "webpack": "^5.65.0"
+  }
+}

@@ -1,0 +1,134 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.calculate-form {
+    margin-top: 8.3rem;
+
+    @include respond(phone) {
+        margin-top: 6rem;
+        width: 100%;
+    }
+    @include respond(tablet-port) {
+        margin-top: 6rem;
+        width: 100%;
+    }
+    @include respond(tablet-land) {
+        margin-top: 6rem;
+        width: 100%;
+    }
+    .calculate-grid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        @include respond(phone) {
+            flex-direction: column;
+            gap: 20px;
+        }
+        @include respond(tablet-port) {
+            flex-direction: column;
+            gap: 20px;
+        }
+        @include respond(tablet-land) {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &-left,
+        &-right{
+            height: 260px;
+            width: 491px;
+            border-radius: 15px;
+            background: $color-gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include respond(phone) {
+                width: 100%;
+            }
+            @include respond(tablet-port) {
+                width: 100%;
+            }
+            @include respond(tablet-land) {
+                width: 100%;
+            }
+            .calculate-text {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 30px;
+                letter-spacing: 0;
+                text-align: center;
+                max-width: 359px;
+                margin: 0 0 40px 0;
+
+                @include respond(phone) {
+                    font-size: 16px;
+                    line-height: 20px;
+                    max-width: 280px;
+                    word-break: normal;
+                }
+                @include respond(tablet-port) {
+                    font-size: 16px;
+                    line-height: 20px;
+                    max-width: 280px;
+                    word-break: normal;
+                }
+                @include respond(tablet-land) {
+                    font-size: 16px;
+                    line-height: 20px;
+                    max-width: 280px;
+                    word-break: normal;
+                }
+            }
+        }
+    }
+}
+
+.calculate-estimated-price-text {
+    height: 127px;
+    width: 1012px;
+    border-radius: 15px;
+    background: $color-black;
+    color: $color-white;
+    margin-top: 57px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 81px;
+
+    @include respond(phone) {
+        flex-direction: column;
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 60px;
+        padding: 40px 0;
+    }
+    @include respond(tablet-port) {
+        flex-direction: column;
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 60px;
+        padding: 40px 0;
+    }
+    @include respond(tablet-land) {
+        flex-direction: column;
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 60px;
+        padding: 40px 0;
+    }
+}

@@ -1,0 +1,129 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+
+.save-money {
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(phone) {
+        margin-top: 6rem;
+    }
+    @include respond(tablet-port) {
+        margin-top: 6rem;
+    }
+    @include respond(tablet-land) {
+        margin-top: 6rem;
+    }
+    &-title {
+        font-size: 4rem;
+        max-width: 617px;
+        word-break: break-all;
+        margin: 0;
+
+        @include respond(phone) {
+            word-break: normal;
+            max-width: 298px;
+        }
+        @include respond(tablet-port) {
+            word-break: normal;
+            max-width: 298px;
+        }
+        @include respond(tablet-land) {
+            word-break: normal;
+            max-width: 298px;
+        }
+    }
+    &-sub {
+        font-size: 20px;
+        max-width: 419px;
+        word-break: break-all;
+        margin-top: 39px;
+
+        @include respond(phone) {
+            font-size: 16px;
+            max-width: 280px;
+            word-break: normal;
+            margin: 25px 0 0 0;
+        }
+        @include respond(tablet-port) {
+            font-size: 16px;
+            max-width: 280px;
+            word-break: normal;
+            margin: 25px 0 0 0;
+        }
+        @include respond(tablet-land) {
+            font-size: 16px;
+            max-width: 280px;
+            word-break: normal;
+            margin: 25px 0 0 0;
+        }
+
+        &--2 {
+            font-size: 20px;
+            max-width: 419px;
+            word-break: break-all;
+            margin: 0;
+
+            @include respond(phone) {
+                font-size: 16px;
+                max-width: 280px;
+                word-break: normal;
+                margin: 0;
+            }
+            @include respond(tablet-port) {
+                font-size: 16px;
+                max-width: 280px;
+                word-break: normal;
+                margin: 0;
+            }
+            @include respond(tablet-land) {
+                font-size: 16px;
+                max-width: 280px;
+                word-break: normal;
+                margin: 0;
+            }
+        }
+    }
+    .sounds-good-title {
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 34px;
+        letter-spacing: 0em;
+        max-width: 375px;
+        word-break: break-all;
+        text-align: center;
+        margin-top: 80px;
+
+        @include respond(phone) {
+            margin-top: 60px;
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 230px;
+            word-break: normal;
+        }
+        @include respond(tablet-port) {
+            margin-top: 60px;
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 230px;
+            word-break: normal;
+        }
+        @include respond(tablet-land) {
+            margin-top: 60px;
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 230px;
+            word-break: normal;
+        }
+    }
+    .buy-now {
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0em;
+        font-weight: 500;
+        text-transform: lowercase;
+    }
+}

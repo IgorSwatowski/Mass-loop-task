@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.heading-primary{
+    font-size: 5.5rem;
+    width: 99.7rem;
+    font-weight: 900;
+    line-height: 67px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    @include respond(phone){
+        width: 100%;
+        font-size: 3.5rem;
+        line-height: 43px;
+    }
+    @include respond(tablet-port){
+        width: 100%;
+    }
+    @include respond(tablet-land){
+        width: 100%;
+    }
+}
+
+.heading-secondary {
+    font-weight: 900;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    @include respond(phone) {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    @include respond(tablet-port) {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    @include respond(tablet-land) {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}

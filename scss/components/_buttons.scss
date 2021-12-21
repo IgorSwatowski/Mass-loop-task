@@ -1,0 +1,61 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn-primary {
+    background: $main-color;
+    border: 2px solid $main-color;
+    font-size: 16px;
+    box-shadow: 0 20px 59px -10px #00000026;
+    box-sizing: border-box;
+    border-radius: 28.5px;
+    padding: 15px 71px;
+    font-weight: 900;
+}
+.form-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 42px;
+    cursor: pointer;
+}
+.btn-buy-now {
+    font-family: 'Fixture', sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    background: $main-color;
+    box-shadow: 0 34px 64px -10px rgba(0, 0, 0, 0.15);
+    border-radius: 48px;
+    font-weight: 700;
+    margin-top: 60px;
+    padding: 24px 99px;
+
+    @include respond(phone) {
+        font-size: 20px;
+        line-height: 24px;
+        width: 100%;
+        max-width: 320px;
+        padding: 24px 0;
+        word-break: break-all;
+    }
+    @include respond(tablet-port) {
+        font-size: 20px;
+        line-height: 24px;
+        width: 100%;
+        max-width: 320px;
+        padding: 24px 0;
+        word-break: break-all;
+    }
+    @include respond(tablet-land) {
+        font-size: 20px;
+        line-height: 24px;
+        width: 100%;
+        max-width: 320px;
+        padding: 24px 0;
+        word-break: break-all;
+    }
+}

@@ -1,0 +1,79 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+
+.info-box {
+    background: $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 20px solid $color-white;
+    margin-top: 66.9rem;
+    border-radius: 30px;
+    @include respond(phone) {
+        margin-top: -14rem;
+        border-radius: 10px;
+        border: 0;
+        outline: #fff solid 20px;
+    }
+    @include respond(tablet-port) {
+        margin-top: -21rem;
+        border-radius: 10px;
+        border: 0;
+        outline: #fff solid 20px;
+    }
+    @include respond(tablet-land) {
+        margin-top: -31rem;
+        border-radius: 10px;
+        border: 0;
+        outline: #fff solid 20px;
+    }
+    &-title {
+        font-size: 4rem;
+        max-width: 629px;
+        word-break: break-all;
+        margin: 6rem 0 0 0;
+
+        @include respond(phone) {
+            font-size: 24px;
+            max-width: 280px;
+            word-break: normal;
+            margin: 5rem 0 0 0;
+        }
+        @include respond(tablet-port) {
+             font-size: 24px;
+             max-width: 280px;
+             word-break: normal;
+             margin: 5rem 0 0 0;
+        }
+        @include respond(tablet-land) {
+            font-size: 24px;
+            max-width: 280px;
+            word-break: normal;
+            margin: 5rem 0 0 0;
+        }
+
+    }
+    &-sub {
+        font-size: 20px;
+        max-width: 711px;
+        word-break: break-all;
+        margin: 4rem 0 6.6rem 0;
+
+        @include respond(phone) {
+            font-size: 16px;
+            max-width: 320px;
+            word-break: normal;
+        }
+        @include respond(tablet-port) {
+            font-size: 16px;
+            max-width: 320px;
+            word-break: normal;
+        }
+        @include respond(tablet-land) {
+            font-size: 16px;
+            max-width: 320px;
+            word-break: normal;
+        }
+    }
+}
